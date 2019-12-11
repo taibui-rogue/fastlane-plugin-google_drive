@@ -33,8 +33,9 @@ module Fastlane
           UI.message('------------------')
         end
 
-        Actions.lane_context[SharedValues::GDRIVE_UPLOADED_FILE_NAMES] = uploaded_files.map(&:title)
-        Actions.lane_context[SharedValues::GDRIVE_UPLOADED_FILE_URLS] = uploaded_files.map(&:human_url)
+        uploaded_files
+#         Actions.lane_context[SharedValues::GDRIVE_UPLOADED_FILE_NAMES] = uploaded_files.map(&:title)
+#         Actions.lane_context[SharedValues::GDRIVE_UPLOADED_FILE_URLS] = uploaded_files.map(&:human_url)
       end
 
       def self.description
